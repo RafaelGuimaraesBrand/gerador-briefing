@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    
+   
+</head>
+<body>
+    <div class="container">
+        <h2>Criador de Briefing</h2>
+        <form id="briefingForm">
+            <div class="horizontal-group">
+                <label for="responsavel">1. Responsável:</label>
+                <select id="responsavel" required>
+                    <option value="Josi Ferreira">Josi Ferreira</option>
+                    <option value="Hinglid Braga">Hinglid Braga</option>
+                    <option value="Rafael Guimarães">Rafael Guimarães</option>
+                    <option value="Luiz Maia">Luiz Maia</option>
+                </select>
+            </div>
+            <div class="horizontal-group">
+                <label for="cliente">2. Cliente:</label>
+                <input type="text" id="cliente" name="cliente" required>
+            </div>
+
+            <div class="horizontal-group">
+                <label for="objetivo">3. Objetivo da Campanha:</label>
+                <select id="objetivo" required>
+                    <option value="Conversão">Conversão</option>
+                    <option value="Tráfego">Tráfego</option>
+                    <option value="Engajamento">Engajamento</option>
+                    <option value="Alcance">Alcance</option>
+                </select>
+            </div>
+
+            <div class="horizontal-group">
+                <label for="canais">4. Canais:</label>
+                <select id="canais" required>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Google Display">Google Display</option>
+                    <option value="YouTube">YouTube</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="TikTok">TikTok</option>
+                </select>
+            </div>
+
+            <div class="horizontal-group">
+                <label for="formato">5. Formato:</label>
+                <select id="formato" required>
+                    <option value="" disabled selected>Selecione o formato</option>
+                </select>
+            </div>
+
+            <div class="horizontal-group">
+                <label for="posicionamento">6. Posicionamento:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="posicionamento[]" value="Feed(1080x1080)">Feed(1080x1080)
+                    <input type="checkbox" name="posicionamento[]" value="Stories(1080x1920)">Stories(1080x1920)
+                    <input type="checkbox" name="posicionamento[]" value="Video(1080X720)">Video(1080X720)
+                </div>
+            </div>
+            
+            <!-- Os outros campos do formulário aqui -->
+            
+            <div class="horizontal-group">
+                <label for="observacoes">Observações importantes:</label>
+                <textarea id="observacoes" rows="4"></textarea>
+            </div>
+            
+            <button type="button" id="gerarBriefing">Gerar Briefing</button>
+            <button style="margin-top: 10px;" type="button" id="gerarPDF">Gerar PDF</button>
+            <div id="resultado"></div>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
